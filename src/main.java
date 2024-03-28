@@ -8,7 +8,10 @@ public class main {
             System.out.print(message);
             try {
                 digit = Integer.parseInt(reader.next());
-                break;
+                if (digit>=1 && digit<=3){
+                    break;
+                }
+                System.out.println("Число вне диапазона (1-3)");
             } catch (NumberFormatException e) {
                 System.out.println("Неверный ввод!");
             }
@@ -33,8 +36,6 @@ public class main {
             }
             System.out.println();
         }
-
-        Scanner reader = new Scanner(System.in);
 //        int[][] moveMade = new int[9][2];
 
         boolean PlayerMove = true;
